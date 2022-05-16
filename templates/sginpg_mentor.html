@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+
+
+{% block middle %}
+
+<div class="usr">
+    {% comment %} <p>--Welcome <span>{{request.user}}--</span></p> 
+    <p>--Welcome <span>{{request.user.id}}--</span></p> 
+    <p>--Welcome <span>{{request.user.username}}--</span></p> 
+    <p>--Welcome <span>{{request.user.password}}--</span></p> 
+    <p>--Welcome <span>{{request.user.is_staff}}--</span></p>
+    <p>--Welcome <span>{{request.user.email}}--</span></p> 
+    <p>--Welcome <span>{{request.user.is_active}}--</span></p> 
+    <p>--Welcome <span>{{request.user.date_joined}}--</span></p> 
+    <p>--Welcome <span>{{request.user.is_superuser}}--</span></p> 
+    <p>--Welcome <span>{{request.user.is_user}}--</span></p> 
+     {% endcomment %}
+</div>
+
+{% for message in messages %}
+<div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+    <strong>WARNING:</strong> {{message}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+
+<div class="gp"></div>
+<form action="" method="POST">
+    {% csrf_token %}
+        <div class="hpname">
+            <p>Full Name</p>
+            <div class="icon">
+                <i class="fa fa-user"></i>
+            </div>
+            <input type="text" placeholder="Enter Full Name" name="full_Name" value="{{usr_info.full_Name}} " required>
+        </div>
+        <div class="phnum">
+            <p>Phone number</p>
+            <div class="icon">
+                <i class="fa fa-phone"></i>
+            </div>
+            <input type="text" placeholder="Enter Phone Number" name="phone" value="{{usr_info.phone}}" required>
+        </div>
+        <div class="email">
+            <p>Email Address</p>
+            <div class="icon">
+                <i class="fa fa-envelope"></i>
+            </div>
+            <input type="email" placeholder="Enter your email" name="email" value="{{my_usr_inf.email}}" readonly required>
+        </div>
+        <div class="city">
+            <p>City</p>
+            <div class="icon">
+                <i class="fa fa-building"></i>
+            </div>
+            <input type="text" placeholder="Enter City Name" name="city" value="{{usr_info.city}}" required>
+        </div>
+        <div class="addr1">
+            <p>company name</p>
+            <div class="icon">
+                <i class="fa fa-address-card"></i>
+            </div>
+            <input type="text" placeholder="Enter compny name" name="company_name" value="{{usr_info.company_name}}" required>
+        </div>
+        <div class="addr2">
+            <p>total earnings</p>
+            <div class="icon">
+                <i class="fa fa-address-card"></i>
+            </div>
+            <input type="text" placeholder="Enter earnings" name="total_earnings_by" value="{{usr_info.total_earnings_by}}" required>
+        </div>
+        <div class="addr3">
+            <p>description in short</p>
+            <div class="icon">
+                <i class="fa fa-address-card"></i>
+            </div>
+            <input type="text" placeholder="Enter short description" name="description_in_short" value="{{usr_info.description_in_short}}" required>
+        </div>
+        <div class="addr4">
+            <p>future goals</p>
+            <div class="icon">
+                <i class="fa fa-address-card"></i>
+            </div>
+            <input type="text" placeholder="Enter address" name="future_goals" value="{{usr_info.future_goals}}" required>
+        </div>
+        <div class="addr4">
+            <p>address</p>
+            <div class="icon">
+                <i class="fa fa-address-card"></i>
+            </div>
+            <input type="text" placeholder="Enter address" name="address" value="{{usr_info.address}}" required>
+        </div>
+        <div class="addr5">
+            <p>field of interest</p>
+            <div class="icon">
+                <i class="fa fa-address-card"></i>
+            </div>
+            <input type="text" placeholder="Enter field of interest" name="field_of_interest" value="{{usr_info.field_of_interest}}" required>
+        </div>
+        <div class="addr6">
+            <p>experience in yrs</p>
+            <div class="icon">
+                <i class="fa fa-address-card"></i>
+            </div>
+            <input type="text" placeholder="Enter experience in years" name="experience_yrs" value="{{usr_info.experience_yrs}}" required>
+        </div>
+        <div class="addr7">
+            <p>country</p>
+            <div class="icon">
+                <i class="fa fa-address-card"></i>
+            </div>
+            <input type="text" placeholder="Enter country" name="country" value="{{usr_info.country}}" required>
+        </div>
+        <div class="addr8">
+            <p>state</p>
+            <div class="icon">
+                <i class="fa fa-address-card"></i>
+            </div>
+            <input type="text" placeholder="Enter state" name="states" value="{{usr_info.states}}" required>
+        </div>
+        <div class="addr7">
+            <p>git hub account</p>
+            <div class="icon">
+                <i class="fa fa-address-card"></i>
+            </div>
+            <input type="text" placeholder="Enter github id" name="git_hub" value="{{usr_info.git_hub}}" required>
+        </div>
+        <div class="addr7">
+            <p>instagram account</p>
+            <div class="icon">
+                <i class="fa fa-address-card"></i>
+            </div>
+            <input type="text" placeholder="Enter insta id" name="insta_link" value="{{usr_info.insta_link}}" required>
+        </div>
+        <div class="addr7">
+            <p>linked in</p>
+            <div class="icon">
+                <i class="fa fa-address-card"></i>
+            </div>
+            <input type="text" placeholder="Enter linekd in id" name="linked_in" value="{{usr_info.linked_in}}" required>
+        </div>
+
+        <div class="addr8">
+            <p>email</p>
+            <div class="icon">
+                <i class="fa fa-address-card"></i>
+            </div>
+            <input type="text" placeholder="Enter linekd in id" name="email" value="{{usr_info.email}}" required>
+        </div>
+        
+        <div class="addr9">
+            <p>image</p>
+            <div class="icon">
+                <i class="fa fa-address-card"></i>
+            </div>
+            <input type="file" placeholder="add image" name="image" value="{{usr_info.image}}" required>
+        </div>
+        <div class="sbmt">
+            <button type="submit">Update</button>
+        </div>
+    </form> 
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+<h1>your profile</h1>
+
+<ul>
+<li>{{usr_info.address}}</li>
+<li>{{usr_info.full_Name}}</li>
+<li>{{usr_info.city}}</li>
+<li>{{usr_info.phone}}</li>
+</ul>
+
+{% endblock middle %}

@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+
+{% block middle %}
+
+{% for message in messages %}
+<div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+    <strong>WARNING:</strong> {{message}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+
+
+
+
+{% if obj_ment %}
+
+
+<h3 class="mb-5 mt-5"> <center>data found</center></h3>
+
+<center>
+<div class="srch">
+  <form action="/search" method="GET">
+      <div class="srch-btn">
+          <input style="color:red; font-size:30px; width:73%" type="text" name="search"  placeholder="Search mentor by city" id="">
+      <button style="font-size:30px; background:cyan ;" class="srbtn" type="submit" placeholder="Search hospital by city" required>Search</button>
+      </div>
+  </form>
+</div>
+</center>
+
+
+
+  {% else %}
+
+  <h2>No data found</h2>
+  {% endif %}
+  
+ 
+
+
+  {% for i in obj_ment%}
+
+    
+    <div class="container align-content-center mt-5">
+      <div class="card text-white bg-info mb-3  " style="max-width: 70rem;">
+        <div class="card-header">{{i.id}} <h5>Full Name : {{i.full_Name}}</h5></div>
+        <div class="card-body">
+          <h5 class="card-title">City :  {{i.city}}</h5>
+          <h5 class="card-title">country :  {{i.country}}</h5>
+          <h5 class="card-title">state :  {{i.states}}</h5>
+          <h5 class="card-title">Address : {{i.address}}</h5>
+          <h5 class="card-text">Phone: {{i.phone}}</h5>
+          <h5 class="card-text">Field of interest: {{i.field_of_interest}}</h5>
+          <h5 class="card-text">Company Name: {{i.company_name}}</h5>
+          <h5 class="card-text">Experience: {{i.experience_yrs}}</h5>
+          <h5 class="card-text">Net Worth: {{i.total_earnings_by}}</h5>
+          <h5 class="card-text">Description: {{i.description_in_short}}</h5>
+          <button class="btn btn-success"><a class="text-white" href="{% url 'request_mentor' i.id %}" style="text-decoration:none;">Request for Mentorship</a></button>  
+        </div> 
+      </div>
+ 
+   
+  {% endfor %}
+
+
+ 
+
+
+
+
+{% endblock middle %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block middle %}
+
+
+       
+
+
+<h3 class="mt-5 mb-5"><center>Government_Notify_Page</center></h3>
+
+
+
+
+<div class="container align-content-center mt-5 mb-5">
+
+
+  
+    <div class="card text-white bg-info mt-3 mb-3" style="max-width: 70rem;">
+        
+      {% for i in ssp %}
+
+
+      <div class="card-header bg-light text-dark"><h5><b>{{i.id}} => Title : {{i.notify_title}}<b/></h5></div>
+      <div class="card-body">
+        <h5 class="card-title">Content:  {{i.notify_body}}</h5>
+        <h5 class="card-title">By whom :  {{i.notify_by_whom}}</h5>
+        <h5 class="card-title">Sate :  {{i.notify_dates}}</h5>
+      </div>
+      <br>
+     
+      {% endfor %}
+    </div>
+  
+
+
+{% endblock middle %}
+
+
+
+{% block ending %}
+{% endblock ending %}
+

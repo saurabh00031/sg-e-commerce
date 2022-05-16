@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+
+
+{% block middle %}
+      
+   
+    
+<h1 style="text-align: center; ">MENTOR REGISTRATION</h1><br>
+<hr>
+
+<div class="form-group">
+
+
+
+<center>
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <div class="sbmt">
+        <button style="background-color:blue; font-size:20px" type="submit">Register</button>
+    </div>
+</form>
+</center>
+</div>
+
+
+
+
+{% endblock middle %}
+

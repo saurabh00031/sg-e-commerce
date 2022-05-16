@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    
+
+
+    .headerZ{
+        border:0.5px solid white;
+          min-height:100vh;
+          width:100%;
+          background-image : linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://images.unsplash.com/photo-1547658718-1cdaa0852790?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTF8fGNvbXB1dGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60) ;
+          background-position:center;
+          background-size:cover;
+          position:relative;
+      
+      }
+
+
+div#carousel { 
+
+perspective: 1200px; 
+
+padding-top: 10%; 
+font-size:0; 
+margin-bottom: 3rem; 
+overflow: hidden; 
+}
+figure#spinner { 
+transform-style: preserve-3d; 
+height: 300px; 
+transform-origin: 50% 50% -500px; 
+transition: 1s; 
+} 
+figure#spinner img { 
+width: 40%; max-width: 425px; 
+position: absolute; left: 30%;
+transform-origin: 50% 50% -500px;
+outline:1px solid transparent; 
+}
+figure#spinner img:nth-child(1) { transform:rotateY(0deg); 
+}
+figure#spinner img:nth-child(2) { transform: rotateY(-45deg); }
+figure#spinner img:nth-child(3) { transform: rotateY(-90deg); }
+figure#spinner img:nth-child(4) { transform: rotateY(-135deg); }
+figure#spinner img:nth-child(5){ transform: rotateY(-180deg); }
+figure#spinner img:nth-child(6){ transform: rotateY(-225deg); }
+figure#spinner img:nth-child(7){ transform: rotateY(-270deg); }
+figure#spinner img:nth-child(8){ transform: rotateY(-315deg); }
+div#carousel ~ span { 
+color: #fff; 
+margin: 5%; 
+display: inline-block; 
+text-decoration: none; 
+font-size: 2rem; 
+transition: 0.6s color; 
+position: relative; 
+margin-top: -6rem; 
+border-bottom: none; 
+line-height: 0; }
+div#carousel ~ span:hover { color: #888; cursor: pointer; }
+
+
+</style>
+<body>
+
+
+    <section class="headerZ">
+  
+   
+  
+  
+  <div class="text-box">
+  
+    <center><h1 style="color:white">Sales</h1></center>
+    
+    <div id="carousel">
+      <figure id="spinner">
+        <img style="border:3px solid white;" src="https://images.unsplash.com/photo-1580828343064-fde4fc206bc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8c2FsZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt>
+        <img style="border:3px solid white;" src="https://images.unsplash.com/photo-1611403570720-162d8829689a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHNhbGVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt>
+        <img style="border:3px solid white;" src="https://images.unsplash.com/photo-1577538928305-3807c3993047?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHNhbGVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt>
+        <img style="border:3px solid white;" src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzd8fHNhbGVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt>
+        <img style="border:3px solid white;" src="https://images.unsplash.com/photo-1607082352121-fa243f3dde32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTd8fHNhbGVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt>
+        <img style="border:3px solid white;" src="https://images.unsplash.com/photo-1542992015-4a0b729b1385?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA2fHxzYWxlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt>
+        <img style="border:3px solid white;" src="https://images.unsplash.com/photo-1546502208-81d149d52bd7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQ1fHxzYWxlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt>
+        <img style="border:3px solid white;" src="https://images.unsplash.com/photo-1527264935190-1401c51b5bbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTczfHxzYWxlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt>
+      </figure>
+    </div>
+    <span style="float:left" class="ss-icon" onclick="galleryspin('-')">&lt;</span>
+    <span style="float:right" class="ss-icon" onclick="galleryspin('')">&gt;</span>
+  
+  
+    
+    </div>
+    </section>
+  
+</body>
+
+<script>
+
+
+    function showMenu()
+    {
+    let fix=document.getElementById('nav-id');
+    fix.style.right="0";
+    }
+    
+    
+    function hideMenu()
+    {
+    let fix=document.getElementById('nav-id');
+    fix.style.right="-200px";
+    
+    
+    }
+    
+    
+    
+    
+    var angle = 0;
+    function galleryspin(sign) { 
+    spinner = document.querySelector("#spinner");
+    if (!sign) { angle = angle + 45; } else { angle = angle - 45; }
+    spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
+    }
+
+</script>
+</html>
+

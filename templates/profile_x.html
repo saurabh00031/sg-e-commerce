@@ -1,0 +1,16 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block middle %}
+
+<div class="container text-dark">
+    
+       
+    <img src="{{sorrows.image.url}}" alt="Profile Picture" style="height: 10rem; border-radius: 50%; border: 5px solid #000000;">
+     <h3>{{request.user.id}}</h3>
+     <h3>{{request.user}}</h3>
+     <h3>{{sorrows.image}}</h3>
+
+</div>
+
+{% endblock middle %}

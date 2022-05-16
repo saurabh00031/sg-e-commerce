@@ -1,0 +1,80 @@
+{% extends 'basex.html' %}
+  <!-- Page Content -->
+  {%  block content %}
+
+
+
+  {% for message in messages %}
+  <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+      <strong>WARNING:</strong> {{message}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor %}
+
+
+  <div class="container">
+
+
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Title -->
+        <h1 class="mt-4">{{post.title}}</h1>
+
+        <!-- Author -->
+        <p class="lead">
+          by
+          <a href="#">{{post.writer}}</a>
+        </p>
+
+        <hr>
+
+        <!-- Date/Time -->
+        <p>Posted on {{post.created_on}}</p>
+
+        <hr>
+
+        <!-- Preview Image -->
+        <img class="img-fluid rounded" src="{{post.image.url}}" alt="">
+
+        <hr>
+
+        <!-- Post Content -->
+        <p>{{post.body}}</p>
+
+        
+          
+        <hr>
+
+        <!-- Comments Form -->
+        <div class="card my-4">
+          <h5 class="card-header">Leave a Comment:</h5>
+          <div class="card-body">
+
+            <form method="POST">
+                {% csrf_token %}
+               {{form.commenter}} <br>
+              {{form.body}}<br>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+          </div>
+        </div>
+
+        <!-- Single Comment -->
+        
+        {% for comment in comments %}
+        <div class="media mb-4">
+          <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+          <div class="media-body">
+            <h5 class="mt-0">{{comment.commenter}}</h5>
+            {{comment.body}}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+     {% endblock %}
