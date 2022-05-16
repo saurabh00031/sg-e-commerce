@@ -25,7 +25,7 @@ SECRET_KEY = '77t=#hzid8!kp^qna8ec2d90bepw7rw%i%zzkwssun3)3w6at^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://elaborate-kangaroo-2a70c1.netlify.app']
 
 
 # Application definition
